@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <P>YouTube Subscribe Button</P>
+        <button onclick="
+        subcribe('.js-Subscribe-button');
+        "class="js-Subscribe-button">Subscribe</button>
+        <button class="but"><img src="O.jpeg" class="img"></button>  
+        <script>
+            function subcribe(h){
+                const buttonElement= document.querySelector(h);
+                if (buttonElement.innerHTML === 'Subscribe'){
+                    buttonElement.innerHTML = 'Subscribed';
+                }else{
+                    buttonElement.innerHTML = 'Subscribe';
+                }
+            }
+            console.log(document.querySelector('.but').innerHTML === '<img src="O.jpeg" class="img">',' hi')
+        </script>
+    </body>
+</html>    

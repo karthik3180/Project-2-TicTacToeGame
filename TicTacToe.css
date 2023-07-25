@@ -1,0 +1,67 @@
+.body{
+    display: flex;
+    flex-direction: row;
+    height: 407px;
+    margin-top: 3%;
+}
+.background{
+    margin-left: 7%;
+    background-color: rgba(255, 255, 255, 0.833);
+    width: 421px;
+    padding-top: 35px;
+    padding-left: 35px;
+    margin-bottom: 5px;
+    padding-right: 17px;
+    border-radius: 20px;
+}
+.button_inside{
+    height: 117px;
+    width: 117px;
+    border-radius: 20px;
+}
+button{
+    background-color: white;
+    height: 117px;
+    width: 117px;
+    margin-left: 0px;
+    margin-bottom: 13px;
+    margin-right: 13px;
+    border: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.317);
+}
+button:hover{
+    box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.811);
+}
+.game-background{
+    display: flex;
+    flex-direction: row;
+    background-color: lightskyblue;
+    margin-left: 200px;
+    padding-top: 45px;
+    width: 900px;
+    height: 450px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+}
+.text-game{
+    display: grid;
+    grid-template-rows: 45% 45%;
+    background-color: rgba(255, 255, 255, 0.833);
+    margin-top: 3px;
+    margin-left: 50px;
+    /* background-color: lightpink; */
+    width: 265px;
+    height: 440px;
+    border-radius: 20px;
+}
+.inner-1{
+    display: grid;
+    grid-template-columns: 95px 125px;
+    width: 220px;
+    margin-left: 22px;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.194);
+}

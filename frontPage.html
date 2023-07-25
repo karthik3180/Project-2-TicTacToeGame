@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .details{
+                background-color: lightskyblue;
+                margin-left: 385px;
+                padding-left: 90px;
+                padding-top: 55px;
+                height: 350px;
+                margin-top: 110px;
+                margin-right: 480px;
+                padding-bottom: 30px;
+                border-radius: 10px;
+
+            }
+            /* .ChooseO,.ChooseX{
+                height: 100px;
+                margin-right: 10px;
+                padding-left: 0px;
+            } */
+            .textbox1,.textbox2{
+                width: 207px;
+                height: 30px;
+            }
+            .formdesign input{
+                /* font-size: 10px; */
+                border: 1px solid white;
+                font-size: 15px;
+                border-radius: 4px;
+            }
+            .play{
+                width: 215px;
+                height: 35px;
+                margin-top: 20px;
+                border-radius: 4px;
+                border: solid;
+                border-color: rgba(137, 43, 226, 0.096);
+                background-color: rgba(137, 43, 226, 0.468);
+                color: aliceblue;
+                cursor: pointer;
+            }
+            .play:hover{
+                background-color: aliceblue;
+                color: blueviolet;
+                border-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="details">
+            <form action="TicTacToe.html" name="form" target="_blank" onsubmit="return formValidation()"> 
+              <!-- <form action="">  -->
+                <div class="formdesign">
+                    <p>Enter player-1 name : </p>
+                    <input type="text" name="firstname" class="textbox1" placeholder="Name" required>
+                </div>
+                <div class="formdesign">
+                    <p>Enter Player-2 name :</p>
+                    <input type="text" class="textbox2" name="secondname" placeholder="Name" required>
+                </div>
+                <div class="formdesign">
+                    <p>Choose O or X for player-1</p>
+                  <!-- <input type="image" src="O.jpeg" name="O" class="ChooseO" id="o" value="O" onclick="choose('o')" required>
+                    <input type="image" src="X.jpeg" name="X" class="ChooseX" id="x" value="X" onclick="choose('x')" required>  -->
+                    <input type="text" class="textbox2" name="XorO" placeholder="Name" required>
+                </div>
+                <div><button class="play" >Play</button></div>
+                <!-- <div><input type="submit" src="TicTacToe.html" value="PLAY" class="bu"></div> -->
+            </form>
+        </div>
+        <script>
+               var xo='';
+               var count=0;
+               
+              // console.log((document.querySelector('.textbox1').value).length)
+              function choose(val){
+
+                xo=document.getElementById(val).value;
+                console.log(xo);
+                localStorage.setItem("ch",xo);
+
+              }
+              function formValidation(){
+                var fname=document.forms['form']["firstname"].value;
+                localStorage.setItem("player1",fname);
+                console.log(fname);
+                var sname=document.forms['form']['secondname'].value;
+                localStorage.setItem("player2",sname);  
+                console.log(sname);
+                xo=document.forms['form']['XorO'].value;
+                if(xo==='x' || xo==='o' || xo==='X' || xo==='O'){
+                    localStorage.setItem("player-1",xo);
+                }else{
+                    alert("...........Enter only x or o..........")
+                    return false;
+                }
+                localStorage.setItem("ch",xo);
+                console.log(xo);
+                return true;
+                }
+        </script>
+    </body>
+</html>
